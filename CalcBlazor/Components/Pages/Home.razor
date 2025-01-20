@@ -1,5 +1,4 @@
 ﻿@page "/"
-
 @using CalcLogic
 
 <PageTitle>Home</PageTitle>
@@ -8,321 +7,278 @@
 
 @* <p>Welcome to your new app.</p> *@
 <p>I Coppied the HTML an CSS from https://tinyurl.com/mrymw4vf <br> &nbsp; </p>
-
-<div jsname="a1lrmb" class="TIGsTb">
-    <span jsname="ieUz0d" class="XDTKBd z1asCe dAmgBb" role="button" tabindex="0" jsaction="xAJjwc"
-        aria-label="calculations history" style="height:22px;line-height:22px;width:22px"
-        data-ved="2ahUKEwjb-IyVpoGLAxVDl-4BHY7mDQ0Quf0DegQIChAF"></span>
-    <span jsname="CGmiC" class="V8AKPe"></span>
-    <div jsname="VSgwn" class="xwgN1d XSNERd">
-        <div jsname="VkJw6" class="XH1CIc">
-            <span jsname="ubtiRe" class="vUGUtc"></span>
+<div class="TIGsTb">
+    <span class="XDTKBd z1asCe dAmgBb" style="height:22px;line-height:22px;width:22px"></span>
+    <span class="V8AKPe"></span>
+    <div class="xwgN1d XSNERd">
+        <div class="XH1CIc">
+            <span class="vUGUtc"></span>
         </div>
     </div>
-    <div jsname="DjP6yd" class="fB3vD">
-        <div jsname="jhotKb" class="jlkklc" role="presentation" tabindex="0"
-            jsaction="mousedown:w07Nsb;focus:w07Nsb;blur:L8YEW;keydown:duASZc;keypress:Jmgzxb;keyup:dbqUTd"
-            data-ved="2ahUKEwjb-IyVpoGLAxVDl-4BHY7mDQ0QzrsEegQIChAH">
-            <div jsname="zLiRgc" class="z7BZJb XSNERd">
+    <div class="fB3vD">
+        <div class="jlkklc">
+            <div class="z7BZJb XSNERd">
                 <!-- Bind the output text dynamically -->
-                <span jsname="VssY5c" class="qv3Wpe">@(FunctionBot.CounterValue + 5)</span>
+                <span class="qv3Wpe">@(FunctionBot.CounterValue + 5)</span>
             </div>
         </div>
     </div>
 </div>
-
-
 <div class="SKWP2e">
     <div class="D7XRgb">
         <table class="HOoTuc">
             <tbody>
                 <tr>
-                    <td class="rfUaPd pno7A" colspan="2" role="none">
+                    <td class="rfUaPd pno7A" colspan="2">
                         <div class="PaQdxb UpZIS">
-                            <div jsname="eZrlT" class="XRsWPe MEdqYd bbBmvd" jsaction="IGArIc" role="button"
-                                tabindex="0" aria-label="switch between radians and degrees"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAI">
+                            <div class="XRsWPe MEdqYd bbBmvd">
                                 <div @onclick=FunctionBot.addRad class="Tqvz7b">Rad</div>
                                 <div class="Lm2Tt"></div>
                                 <div @onclick=FunctionBot.addDeg class="SwDSDf">Deg</div>
                             </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addFactorial jsname="SfS5gd" class="XRsWPe MEdqYd" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="factorial"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAJ">x!</div>
+                            <div @onclick=FunctionBot.addFactorial class="XRsWPe MEdqYd">x!</div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addInverse jsname="MyfPQc" class="XRsWPe feqqG knVDYb" jsaction="FJTJHe"
-                                role="button" tabindex="0" aria-label="inverse"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAK">Inv</div>
+                            <div @onclick=FunctionBot.addInverse class="XRsWPe feqqG knVDYb">Inv</div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addSin jsname="aN1RFf" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="sine"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAL">
-                                sin</div>
-                            <div @onclick=FunctionBot.addArcSin jsname="Yg8v1d" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="arcsine"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAM"> sin<sup>−1</sup></div>
+                            <div @onclick=FunctionBot.addSin class="XRsWPe MEdqYd Krlpq">sin</div>
+                            <div @onclick=FunctionBot.addArcSin class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                sin<sup>−1</sup></div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addLn jsname="SO8kQ" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="natural logarithm"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAN">
-                                ln </div>
-                            <div @onclick=FunctionBot.addE jsname="fCFguf" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="E to the power of X"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAO"> e<sup>x</sup></div>
+                            <div @onclick=FunctionBot.addLn class="XRsWPe MEdqYd Krlpq">ln</div>
+                            <div @onclick=FunctionBot.addE class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                e<sup>x</sup></div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addPi jsname="vlSEBf" class="XRsWPe MEdqYd" jsaction="A2jXUd" role="button"
-                                tabindex="0" aria-label="pi" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAP">π
-                            </div>
+                            <div @onclick=FunctionBot.addPi class="XRsWPe MEdqYd">π</div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addCosine jsname="w0Xmgb" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="cosine"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAQ">cos</div>
-                            <div @onclick=FunctionBot.addArccosine jsname="sRAgwd" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="arccosine"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAR"> cos<sup>−1</sup></div>
+                            <div @onclick=FunctionBot.addCosine class="XRsWPe MEdqYd Krlpq">cos</div>
+                            <div @onclick=FunctionBot.addArccosine class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                cos<sup>−1</sup></div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addLog jsname="DfiOAc" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="logarithm"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAS">log</div>
-                            <div @onclick=FunctionBot.add10ToTheX jsname="osoIhf" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="ten to the power of X"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAT"> 10<sup>x</sup></div>
+                            <div @onclick=FunctionBot.addLog class="XRsWPe MEdqYd Krlpq">log</div>
+                            <div @onclick=FunctionBot.add10ToTheX class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                10<sup>x</sup></div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addEulersNumber jsname="K6vNie" class="XRsWPe MEdqYd" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="euler's number"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAU">e
-                            </div>
+                            <div @onclick=FunctionBot.addEulersNumber class="XRsWPe MEdqYd">e</div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addTan jsname="VsnRKc" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="tangent"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAV">tan</div>
-                            <div @onclick=FunctionBot.addArcTan jsname="XKSVB" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="arctangent"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAW"> tan<sup>−1</sup></div>
+                            <div @onclick=FunctionBot.addTan class="XRsWPe MEdqYd Krlpq">tan</div>
+                            <div @onclick=FunctionBot.addArcTan class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                tan<sup>−1</sup></div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addSquareRoot jsname="oQcVc" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="square root"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAX">√
-                            </div>
-                            <div @onclick=FunctionBot.addSquare jsname="TGVsBd" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="square"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAY"> x<sup>2</sup></div>
+                            <div @onclick=FunctionBot.addSquareRoot class="XRsWPe MEdqYd Krlpq">√</div>
+                            <div @onclick=FunctionBot.addSquare class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                x<sup>2</sup></div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addAnswer jsname="ha4tRd" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="answer"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAZ">Ans</div>
-                            <div @onclick=FunctionBot.addRandom jsname="jDGtk" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="random"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAa"> Rnd</div>
-                        </div>
-                    </td>
-                    <td role="none">
-                        <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addExponential jsname="AN4cgb" class="XRsWPe MEdqYd" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="exponential"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAb">EXP
+                            <div @onclick=FunctionBot.addAnswer class="XRsWPe MEdqYd Krlpq">Ans</div>
+                            <div @onclick=FunctionBot.addRandom class="XRsWPe MEdqYd rHLwad" style="display:none"> Rnd
                             </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addXtoTheY jsname="buVl3e" class="XRsWPe MEdqYd Krlpq" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="X to the power of Y"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAc">x<sup>y</sup></div>
-                            <div @onclick=FunctionBot.addYrootsOfX jsname="nl63se" class="XRsWPe MEdqYd rHLwad" style="display:none"
-                                jsaction="A2jXUd" role="button" tabindex="0" aria-label="Y root of X"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAd"> <sup>y</sup>√x</div>
+                            <div @onclick=FunctionBot.addExponential class="XRsWPe MEdqYd">EXP</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="PaQdxb UpZIS">
+                            <div @onclick=FunctionBot.addXtoTheY class="XRsWPe MEdqYd Krlpq">x<sup>y</sup></div>
+                            <div @onclick=FunctionBot.addYrootsOfX class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                <sup>y</sup>√x
+                            </div>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
+
+        @* Next Part of Table *@
         <table class="ElumCf">
             <tbody>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.addLeftParenthesis jsname="j93WEe" class="XRsWPe MEdqYd" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="left parenthesis"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAe">(
+                            <div @onclick=FunctionBot.addLeftParenthesis class="XRsWPe MEdqYd">(</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="PaQdxb A2W7l">
+                            <div @onclick=FunctionBot.addRightParenthesis class="XRsWPe MEdqYd">)</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="PaQdxb A2W7l">
+                            <div @onclick=FunctionBot.addPercentage class="XRsWPe MEdqYd">(</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="PaQdxb UpZIS">
+                            <div @onclick=FunctionBot.addAllClear class="XRsWPe MEdqYd">
+                                AC
+                            </div>
+                            <div @onclick=FunctionBot.addClearEntry class="XRsWPe MEdqYd" style="display:none">
+                                CE
                             </div>
                         </div>
                     </td>
-                    <td role="none">
-                        <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.addRightParenthesis jsname="qCp9A" class="XRsWPe MEdqYd" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="right parenthesis"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAf">
-                                )</div>
-                        </div>
-                    </td>
-                    <td role="none">
-                        <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.addPercentage jsname="F0gbu" class="XRsWPe MEdqYd" jsaction="A2jXUd"
-                                role="button" tabindex="0" aria-label="percentage"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAg">%</div>
-                        </div>
-                    </td>
-                    <td role="none">
-                        <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addAllClear jsname="SLn8gc" class="XRsWPe MEdqYd"
-                                jsaction="xyppdc;mousedown:JHz26d" role="button" tabindex="0" aria-label="all clear"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAh">AC</div>
-                            <div @onclick=FunctionBot.addClearEntry jsname="H7sWPd" class="XRsWPe MEdqYd" style="display:none"
-                                jsaction="xyppdc;mousedown:JHz26d" role="button" tabindex="0" aria-label="clear entry"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAi">CE</div>
-                        </div>
-                    </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add7 jsname="rk7bOd" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button"
-                                tabindex="0" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAj">7</div>
+                            <div @onclick=FunctionBot.add7 class="XRsWPe AOvabd">
+                                7
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add8 jsname="T7PMFe" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button"
-                                tabindex="0" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAk">8</div>
+                            <div @onclick=FunctionBot.add8 class="XRsWPe AOvabd">
+                                8
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div @onclick=FunctionBot.add9 class="PaQdxb A2W7l">
-                            <div jsname="XoxYJ" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button" tabindex="0"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAl">9</div>
+                            <div class="XRsWPe AOvabd">
+                                9
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.add0 jsname="WxTTNd" class="XRsWPe MEdqYd" jsaction="A2jXUd" role="button"
-                                tabindex="0" aria-label="divide"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAm">÷</div>
+                            <div @onclick=FunctionBot.add0 class="XRsWPe MEdqYd">
+                                ÷
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div @onclick=FunctionBot.add4 class="PaQdxb A2W7l">
-                            <div jsname="xAP7E" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button" tabindex="0"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAn">4</div>
+                            <div class="XRsWPe AOvabd">
+                                4
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add5 jsname="Ax5wH" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button"
-                                tabindex="0" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAo">5</div>
+                            <div @onclick=FunctionBot.add5 class="XRsWPe AOvabd">
+                                5
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add6 jsname="abcgof" class="XRsWPe AOvabd" jsaction="A2jXUd" role="buƒtton"
-                                tabindex="0" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAp">6</div>
+                            <div @onclick=FunctionBot.add6 class="XRsWPe AOvabd">
+                                6
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.addx jsname="YovRWb" class="XRsWPe MEdqYd" jsaction="A2jXUd" role="button"
-                                tabindex="0" aria-label="multiply"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAq">×</div>
+                            <div @onclick=FunctionBot.addx class="XRsWPe MEdqYd">
+                                ×
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add1 jsname="N10B9" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button"
-                                tabindex="0" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAr">1</div>
+                            <div @onclick=FunctionBot.add1 class="XRsWPe AOvabd">
+                                1
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add2 jsname="lVjWed" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button"
-                                tabindex="0" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAs">2</div>
+                            <div @onclick=FunctionBot.add2 class="XRsWPe AOvabd">
+                                2
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add3 jsname="KN1kY" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button"
-                                tabindex="0" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAt">3</div>
+                            <div @onclick=FunctionBot.add3 class="XRsWPe AOvabd">
+                                3
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.addMinus jsname="pPHzQc" class="XRsWPe MEdqYd" jsaction="A2jXUd" role="button"
-                                tabindex="0" aria-label="minus"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAu">−</div>
+                            <div @onclick=FunctionBot.addMinus class="XRsWPe MEdqYd">
+                                −
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb A2W7l">
-                            <div jsname="bkEvMb" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button" tabindex="0"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAv">0</div>
+                            <div class="XRsWPe AOvabd">
+                                0
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb mF5fo G7BHUb">
-                            <div @onclick=FunctionBot.addPoint jsname="YrdHyf" class="XRsWPe AOvabd" jsaction="A2jXUd" role="button"
-                                tabindex="0" aria-label="point"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAw">.</div>
+                            <div @onclick=FunctionBot.addPoint class="XRsWPe AOvabd">
+                                .
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb mF5fo G7BHUb">
-                            <div @onclick=FunctionBot.addEquals jsname="Pt8tGc" class="XRsWPe UUhRt" jsaction="bTMBwc" role="button"
-                                tabindex="0" aria-label="equals"
-                                data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAx">=</div>
+                            <div @onclick=FunctionBot.addEquals class="XRsWPe UUhRt">
+                                =
+                            </div>
                         </div>
                     </td>
-                    <td role="none">
+                    <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.addPlus jsname="XSr6wc" class="XRsWPe MEdqYd" jsaction="A2jXUd" role="button"
-                                tabindex="0" aria-label="plus" data-ved="2ahUKEwi6zIGCi4GLAxUcMEQIHeQYLHoQz6kIegQIChAy">
-                                +</div>
+                            <div @onclick=FunctionBot.addPlus class="XRsWPe MEdqYd">
+                                +
+                            </div>
                         </div>
                     </td>
                 </tr>
