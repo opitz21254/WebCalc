@@ -50,12 +50,12 @@ string[] validCommands =
 
 Console.Clear();
 Console.WriteLine("Hello, welcome to Super_Normal_Calculator");
-string userInput = "";
 
+ TakeUserInput();
+string userInput = null;
 do
 {
     Console.Write("Please type a valid command or \'help\' for a list of commands: ");
-    //Why can't I get rid of the null problem with "!"
     string input = Console.ReadLine();
 
     if (input == null)

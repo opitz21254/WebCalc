@@ -4,9 +4,9 @@
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
+<p>I Coppied the HTML an CSS from <a href="https://tinyurl.com/mrymw4vf" target="_blank">Google Calculator</a> <br>
+    &nbsp; </p>
 
-@* <p>Welcome to your new app.</p> *@
-<p>I Coppied the HTML an CSS from https://tinyurl.com/mrymw4vf <br> &nbsp; </p>
 <div class="TIGsTb">
     <span class="XDTKBd z1asCe dAmgBb" style="height:22px;line-height:22px;width:22px"></span>
     <span class="V8AKPe"></span>
@@ -148,7 +148,7 @@
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.addPercentage class="XRsWPe MEdqYd">(</div>
+                            <div @onclick=FunctionBot.addPercentage class="XRsWPe MEdqYd">%</div>
                         </div>
                     </td>
                     <td>
@@ -294,12 +294,9 @@
     </a> </div>
 
 @code {
-    string computed = $"Counter Value: {FunctionBot.CounterValue + 5}";
-
-    @* void addAssignment()
-    {        
-        SharedMemory.AddAssignment();
-    } *@
-
+    protected override void OnInitialized()
+    {
+        RunProgram(); // Populate the StoreItems array when the component is initialized
+    }
 
 }

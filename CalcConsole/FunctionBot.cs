@@ -3,19 +3,14 @@
 public class FunctionBot
 {
     public static int CounterValue = 2;
+    public static List<Function> FunctionsTape = new List<Function>();
 
-    // public static List<Assignment> Assignments = new();
+    public static void AddFunction()
+    {
+        Assignments.Add(new Function("Name", "Digit"));
+    }
 
-    // public static void AddAssignment()
-    // {
-    //     Assignments.Add(new Assignment(
-    //         "12",
-    //         $"Assignment {Assignments.Count + 1}",
-    //         0,
-    //         DateTime.Today.AddDays(1)
-    //     ));
-    // }
-
+    public record Assignment(string Name, string Type);
 
     //Function Methods
     public static void addRad()
@@ -242,7 +237,6 @@ public class FunctionBot
     {
         Console.WriteLine("* (multiply) operator/button clicked");
     }
-
 }
 
 public record Assignment(string Class, string Title, decimal Grade, DateTime Due);
