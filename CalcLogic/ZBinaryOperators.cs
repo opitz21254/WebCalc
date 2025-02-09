@@ -3,12 +3,16 @@ using CalcClasses;
 // The character exponentiation button on the calculator
 public class Exponentiation : CharItem
 {
-    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet { get; private set; }
+    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet
+    {
+        get;
+        private set;
+    }
 
-    public Exponentiation(decimal precidingTermValue, decimal foregoingTermValue)
+    public Exponentiation()
         : base("^")
     {
-        DisplaySet = (precidingTermValue, "^", foregoingTermValue);
+        DisplaySet = (0m, "^", 0m);
         IsFunction = true;
         IsBinaryOperator = true;
     }
@@ -22,12 +26,16 @@ public class Exponentiation : CharItem
 // The character Y-th root of X button on the calculator
 public class YRoot : CharItem
 {
-    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet { get; private set; }
+    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet
+    {
+        get;
+        private set;
+    }
 
-    public YRoot(decimal precidingTermValue, decimal foregoingTermValue)
+    public YRoot()
         : base("y√x")
     {
-        DisplaySet = (precidingTermValue, "y√x", foregoingTermValue);
+        DisplaySet = (0m, "y√x", 0m);
         IsFunction = true;
         IsBinaryOperator = true;
     }
@@ -41,12 +49,16 @@ public class YRoot : CharItem
 // The character division button on the calculator
 public class Division : CharItem
 {
-    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet { get; private set; }
+    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet
+    {
+        get;
+        private set;
+    }
 
-    public Division(decimal precidingTermValue, decimal foregoingTermValue)
+    public Division()
         : base("/")
     {
-        DisplaySet = (precidingTermValue, "/", foregoingTermValue);
+        DisplaySet = (0m, "/", 0m);
         IsFunction = true;
         IsBinaryOperator = true;
     }
@@ -60,12 +72,16 @@ public class Division : CharItem
 // The character multiply button on the calculator
 public class Multiply : CharItem
 {
-    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet { get; private set; }
+    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet
+    {
+        get;
+        private set;
+    }
 
-    public Multiply(decimal precidingTermValue, decimal foregoingTermValue)
+    public Multiply()
         : base("*")
     {
-        DisplaySet = (precidingTermValue, "*", foregoingTermValue);
+        DisplaySet = (0m, "*", 0m);
         IsFunction = true;
         IsBinaryOperator = true;
     }
@@ -79,12 +95,16 @@ public class Multiply : CharItem
 // The character subtraction button on the calculator
 public class Subtraction : CharItem
 {
-    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet { get; private set; }
+    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet
+    {
+        get;
+        private set;
+    }
 
-    public Subtraction(decimal precidingTermValue, decimal foregoingTermValue)
+    public Subtraction()
         : base("-")
     {
-        DisplaySet = (precidingTermValue, "-", foregoingTermValue);
+        DisplaySet = (0m, "-", 0m);
         IsFunction = true;
         IsBinaryOperator = true;
     }
@@ -98,12 +118,16 @@ public class Subtraction : CharItem
 // The character addition button on the calculator
 public class Addition : CharItem
 {
-    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet { get; private set; }
+    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet
+    {
+        get;
+        private set;
+    }
 
-    public Addition(decimal precidingTermValue, decimal foregoingTermValue)
+    public Addition()
         : base("+")
     {
-        DisplaySet = (precidingTermValue, "+", foregoingTermValue);
+        DisplaySet = (0m, "+", 0m);
         IsFunction = true;
         IsBinaryOperator = true;
     }
@@ -114,3 +138,25 @@ public class Addition : CharItem
     }
 }
 
+// The character decimal button on the calculator
+public class Ddecimal : CharItem
+{
+    public (decimal PrecidingTermValue, string Operator, decimal ForegoingTermValue) DisplaySet
+    {
+        get;
+        private set;
+    }
+
+    public Ddecimal()
+        : base("+")
+    {
+        DisplaySet = (0m, ".", 0m);
+        IsFunction = true;
+        IsBinaryOperator = true;
+    }
+
+    public override string GetDisplayString()
+    {
+        return $"{DisplaySet.PrecidingTermValue} {DisplaySet.Operator} {DisplaySet.ForegoingTermValue}";
+    }
+}

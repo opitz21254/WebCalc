@@ -205,3 +205,17 @@ public class Percentage : CharItem
         return "%";
     }
 }
+
+// xToTheY
+public class XToTheY : CharItem
+{
+    public XToTheY() : base("x^y")
+    {
+        IsFunction = true;
+    }
+
+    public override string GetDisplayString()
+    {
+        return "x^y";
+    }
+}

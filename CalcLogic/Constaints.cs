@@ -4,10 +4,11 @@ using CalcClasses;
 public class CharZero : CharItem
 {
     public decimal Value { get; set; } = 0;
-    public CharZero(decimal value)
+
+    public CharZero()
         : base("0")
     {
-        Value = value;
+        Value = 0;
     }
 
     public override string GetDisplayString()
@@ -20,10 +21,11 @@ public class CharZero : CharItem
 public class CharOne : CharItem
 {
     public decimal Value { get; set; } = 1;
-    public CharOne(decimal value)
+
+    public CharOne()
         : base("1")
     {
-        Value = value;
+        Value = 1;
     }
 
     public override string GetDisplayString()
@@ -36,10 +38,11 @@ public class CharOne : CharItem
 public class CharTwo : CharItem
 {
     public decimal Value { get; set; } = 2;
-    public CharTwo(decimal value)
+
+    public CharTwo()
         : base("2")
     {
-        Value = value;
+        Value = 2;
     }
 
     public override string GetDisplayString()
@@ -52,10 +55,11 @@ public class CharTwo : CharItem
 public class CharThree : CharItem
 {
     public decimal Value { get; set; } = 3;
-    public CharThree(decimal value)
+
+    public CharThree()
         : base("3")
     {
-        Value = value;
+        Value = 3;
     }
 
     public override string GetDisplayString()
@@ -68,10 +72,11 @@ public class CharThree : CharItem
 public class CharFour : CharItem
 {
     public decimal Value { get; set; } = 4;
-    public CharFour(decimal value)
+
+    public CharFour()
         : base("4")
     {
-        Value = value;
+        Value = 4;
     }
 
     public override string GetDisplayString()
@@ -84,10 +89,11 @@ public class CharFour : CharItem
 public class CharFive : CharItem
 {
     public decimal Value { get; set; } = 5;
-    public CharFive(decimal value)
+
+    public CharFive()
         : base("5")
     {
-        Value = value;
+        Value = 5;
     }
 
     public override string GetDisplayString()
@@ -100,10 +106,11 @@ public class CharFive : CharItem
 public class CharSix : CharItem
 {
     public decimal Value { get; set; } = 6;
-    public CharSix(decimal value)
+
+    public CharSix()
         : base("6")
     {
-        Value = value;
+        Value = 6;
     }
 
     public override string GetDisplayString()
@@ -116,10 +123,11 @@ public class CharSix : CharItem
 public class CharSeven : CharItem
 {
     public decimal Value { get; set; } = 7;
-    public CharSeven(decimal value)
+
+    public CharSeven()
         : base("7")
     {
-        Value = value;
+        Value = 7;
     }
 
     public override string GetDisplayString()
@@ -132,10 +140,11 @@ public class CharSeven : CharItem
 public class CharEight : CharItem
 {
     public decimal Value { get; set; } = 8;
-    public CharEight(decimal value)
+
+    public CharEight()
         : base("8")
     {
-        Value = value;
+        Value = 8;
     }
 
     public override string GetDisplayString()
@@ -148,14 +157,47 @@ public class CharEight : CharItem
 public class CharNine : CharItem
 {
     public decimal Value { get; set; } = 9;
-    public CharNine(decimal value)
+
+    public CharNine()
         : base("9")
     {
-        Value = value;
+        Value = 9;
     }
 
     public override string GetDisplayString()
     {
         return $"9";
+    }
+}
+
+public class CharPi : CharItem
+{
+    public decimal Value { get; set; } = 3.14159M;
+
+    public CharPi()
+        : base("pi")
+    {
+        Value = 3.14159M;
+    }
+
+    public override string GetDisplayString()
+    {
+        return $"π";
+    }
+}
+
+public class EulersNumber : CharItem
+{
+    public decimal Value { get; set; } = 2.71828M;
+
+    public EulersNumber()
+        : base("e")
+    {
+        Value = 2.71828M;
+    }
+
+    public override string GetDisplayString()
+    {
+        return $"e";
     }
 }

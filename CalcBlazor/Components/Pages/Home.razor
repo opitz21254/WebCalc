@@ -1,10 +1,11 @@
 ﻿@page "/"
-@using CalcLogic
+@using CalcClasses
+@using System.Text
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
-<p>I Coppied the HTML an CSS from <a href="https://tinyurl.com/mrymw4vf" target="_blank">Google Calculator</a> <br>
+<p>I Copied the HTML and CSS from <a href="https://tinyurl.com/mrymw4vf" target="_blank">Google Calculator</a> <br>
     &nbsp; </p>
 
 <div class="TIGsTb">
@@ -18,8 +19,7 @@
     <div class="fB3vD">
         <div class="jlkklc">
             <div class="z7BZJb XSNERd">
-                <!-- Bind the output text dynamically -->
-                <span class="qv3Wpe">@(FunctionBot.CounterValue + 5)</span>
+                <span class="qv3Wpe"> @DisplayString </span>
             </div>
         </div>
     </div>
@@ -32,35 +32,35 @@
                     <td class="rfUaPd pno7A" colspan="2">
                         <div class="PaQdxb UpZIS">
                             <div class="XRsWPe MEdqYd bbBmvd">
-                                <div @onclick=FunctionBot.addRad class="Tqvz7b">Rad</div>
+                                <div @onclick="setRad" class="Tqvz7b">Rad</div>
                                 <div class="Lm2Tt"></div>
-                                <div @onclick=FunctionBot.addDeg class="SwDSDf">Deg</div>
+                                <div @onclick="setDeg" class="SwDSDf">Deg</div>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addFactorial class="XRsWPe MEdqYd">x!</div>
+                            <div @onclick="factorial" class="XRsWPe feqqG knVDYb">x!</div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addInverse class="XRsWPe feqqG knVDYb">Inv</div>
+                            <div @onclick="inverse" class="XRsWPe feqqG knVDYb">Inv</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addSin class="XRsWPe MEdqYd Krlpq">sin</div>
-                            <div @onclick=FunctionBot.addArcSin class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="sine" class="XRsWPe MEdqYd Krlpq">sin</div>
+                            <div @onclick="arcSine" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 sin<sup>−1</sup></div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addLn class="XRsWPe MEdqYd Krlpq">ln</div>
-                            <div @onclick=FunctionBot.addE class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="logarithm" class="XRsWPe MEdqYd Krlpq">ln</div>
+                            <div @onclick="eToTheX" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 e<sup>x</sup></div>
                         </div>
                     </td>
@@ -68,20 +68,20 @@
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addPi class="XRsWPe MEdqYd">π</div>
+                            <div @onclick="charPi" class="XRsWPe MEdqYd">π</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addCosine class="XRsWPe MEdqYd Krlpq">cos</div>
-                            <div @onclick=FunctionBot.addArccosine class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="cosine" class="XRsWPe MEdqYd Krlpq">cos</div>
+                            <div @onclick="arcCosine" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 cos<sup>−1</sup></div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addLog class="XRsWPe MEdqYd Krlpq">log</div>
-                            <div @onclick=FunctionBot.add10ToTheX class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="logarithm" class="XRsWPe MEdqYd Krlpq">log</div>
+                            <div @onclick="tenToTheX" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 10<sup>x</sup></div>
                         </div>
                     </td>
@@ -89,20 +89,20 @@
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addEulersNumber class="XRsWPe MEdqYd">e</div>
+                            <div @onclick="eulersNumber" class="XRsWPe MEdqYd">e</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addTan class="XRsWPe MEdqYd Krlpq">tan</div>
-                            <div @onclick=FunctionBot.addArcTan class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="tangent" class="XRsWPe MEdqYd Krlpq">tan</div>
+                            <div @onclick="arcTangent" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 tan<sup>−1</sup></div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addSquareRoot class="XRsWPe MEdqYd Krlpq">√</div>
-                            <div @onclick=FunctionBot.addSquare class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="squareRoot" class="XRsWPe MEdqYd Krlpq">√</div>
+                            <div @onclick="square" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 x<sup>2</sup></div>
                         </div>
                     </td>
@@ -110,20 +110,21 @@
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addAnswer class="XRsWPe MEdqYd Krlpq">Ans</div>
-                            <div @onclick=FunctionBot.addRandom class="XRsWPe MEdqYd rHLwad" style="display:none"> Rnd
+                            <div @onclick="answer" class="XRsWPe MEdqYd Krlpq">Ans</div>
+                            <div @onclickd=" () => CalcRun.random" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                                Rnd
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addExponential class="XRsWPe MEdqYd">EXP</div>
+                            <div @onclick="exponentiation" class="XRsWPe MEdqYd">EXP</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addXtoTheY class="XRsWPe MEdqYd Krlpq">x<sup>y</sup></div>
-                            <div @onclick=FunctionBot.addYrootsOfX class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="xToTheY" class="XRsWPe MEdqYd Krlpq">x<sup>y</sup></div>
+                            <div @onclick="yRoot" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 <sup>y</sup>√x
                             </div>
                         </div>
@@ -131,32 +132,31 @@
                 </tr>
             </tbody>
         </table>
-
         @* Next Part of Table *@
         <table class="ElumCf">
             <tbody>
                 <tr>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.addLeftParenthesis class="XRsWPe MEdqYd">(</div>
+                            <div @onclick="leftParenthesis" class="XRsWPe MEdqYd">(</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.addRightParenthesis class="XRsWPe MEdqYd">)</div>
+                            <div @onclick="rightParenthesis" class="XRsWPe MEdqYd">)</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.addPercentage class="XRsWPe MEdqYd">%</div>
+                            <div @onclick="percentage" class="XRsWPe MEdqYd">%</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick=FunctionBot.addAllClear class="XRsWPe MEdqYd">
+                            <div @onclick="allClear" class="XRsWPe MEdqYd">
                                 AC
                             </div>
-                            <div @onclick=FunctionBot.addClearEntry class="XRsWPe MEdqYd" style="display:none">
+                            <div @onclick="clearEntry" class="XRsWPe MEdqYd" style="display:none">
                                 CE
                             </div>
                         </div>
@@ -165,20 +165,20 @@
                 <tr>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add7 class="XRsWPe AOvabd">
+                            <div @onclick="charSeven" class="XRsWPe AOvabd">
                                 7
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add8 class="XRsWPe AOvabd">
+                            <div @onclick="charEight" class="XRsWPe AOvabd">
                                 8
                             </div>
                         </div>
                     </td>
                     <td>
-                        <div @onclick=FunctionBot.add9 class="PaQdxb A2W7l">
+                        <div @onclick="charNine" class="PaQdxb A2W7l">
                             <div class="XRsWPe AOvabd">
                                 9
                             </div>
@@ -186,7 +186,7 @@
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.add0 class="XRsWPe MEdqYd">
+                            <div @onclick="charZero" class="XRsWPe MEdqYd">
                                 ÷
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <div @onclick=FunctionBot.add4 class="PaQdxb A2W7l">
+                        <div @onclick="charFour" class="PaQdxb A2W7l">
                             <div class="XRsWPe AOvabd">
                                 4
                             </div>
@@ -202,21 +202,21 @@
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add5 class="XRsWPe AOvabd">
+                            <div @onclick="charFive" class="XRsWPe AOvabd">
                                 5
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add6 class="XRsWPe AOvabd">
+                            <div @onclick="charSix" class="XRsWPe AOvabd">
                                 6
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.addx class="XRsWPe MEdqYd">
+                            <div @onclick="multiply" class="XRsWPe MEdqYd">
                                 ×
                             </div>
                         </div>
@@ -225,28 +225,28 @@
                 <tr>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add1 class="XRsWPe AOvabd">
+                            <div @onclick="charOne" class="XRsWPe AOvabd">
                                 1
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add2 class="XRsWPe AOvabd">
+                            <div @onclick="charTwo" class="XRsWPe AOvabd">
                                 2
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick=FunctionBot.add3 class="XRsWPe AOvabd">
+                            <div @onclick="charThree" class="XRsWPe AOvabd">
                                 3
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.addMinus class="XRsWPe MEdqYd">
+                            <div @onclick="subtraction" class="XRsWPe MEdqYd">
                                 −
                             </div>
                         </div>
@@ -262,21 +262,21 @@
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo G7BHUb">
-                            <div @onclick=FunctionBot.addPoint class="XRsWPe AOvabd">
+                            <div @onclick="ddecimal" class="XRsWPe AOvabd">
                                 .
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo G7BHUb">
-                            <div @onclick=FunctionBot.addEquals class="XRsWPe UUhRt">
+                            <div @onclick="equals" class="XRsWPe UUhRt">
                                 =
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick=FunctionBot.addPlus class="XRsWPe MEdqYd">
+                            <div @onclick="addition" class="XRsWPe MEdqYd">
                                 +
                             </div>
                         </div>
@@ -294,9 +294,62 @@
     </a> </div>
 
 @code {
-    protected override void OnInitialized()
-    {
-        RunProgram(); // Populate the StoreItems array when the component is initialized
-    }
+    private string DisplayString { get; set; } = "";
+    private List<object> CharItems { get; set; } = new List<object>();
 
+    // Special Buttons:
+    private void setRad() { CharItems.Add(new Rad()); }
+    private void setDeg() { CharItems.Add(new Deg()); }
+
+    // Single Operand Functions:
+    private void factorial() { CharItems.Add(new Factorial()); }
+    private void inverse() { CharItems.Add(new Inverse()); }
+    private void sine() { CharItems.Add(new Sine()); }
+    private void arcSine() { CharItems.Add(new ArcSine()); }
+    private void naturalLog() { CharItems.Add(new NaturalLog()); }
+    private void cosine() { CharItems.Add(new Cosine()); }
+    private void arcCosine() { CharItems.Add(new ArcCosine()); }
+    private void logarithm() { CharItems.Add(new Logarithm()); }
+    private void tenToTheX() { CharItems.Add(new TenToTheX()); }
+    private void eToTheX() { CharItems.Add(new EToTheX()); }
+    private void arcTangent() { CharItems.Add(new ArcTangent()); }
+    private void squareRoot() { CharItems.Add(new SquareRoot()); }
+    private void square() { CharItems.Add(new Square()); }
+    private void tangent() { CharItems.Add(new Tangent()); }
+    private void percentage() { CharItems.Add(new Percentage()); }
+    // Class but is it duplicate???
+    private void xToTheY() { CharItems.Add(new XToTheY()); }
+
+    // Constaints:
+    public void charZero() { CharItems.Add(new CharZero()); }
+    public void charOne() { CharItems.Add(new CharOne()); }
+    public void charTwo() { CharItems.Add(new CharTwo()); }
+    public void charThree() { CharItems.Add(new CharThree()); }
+    public void charFour() { CharItems.Add(new CharFour()); }
+    public void charFive() { CharItems.Add(new CharFive()); }
+    public void charSix() { CharItems.Add(new CharSix()); }
+    public void charSeven() { CharItems.Add(new CharSeven()); }
+    public void charEight() { CharItems.Add(new CharEight()); }
+    public void charNine() { CharItems.Add(new CharNine()); }
+    public void charPi() { CharItems.Add(new CharPi()); }
+    public void eulersNumber() { CharItems.Add(new EulersNumber()); }
+
+
+    // Special Buttons:
+    public void leftParenthesis() { CharItems.Add(new LeftParenthesis()); }
+    public void rightParenthesis() { CharItems.Add(new RightParenthesis()); }
+    public void allClear() { CharItems.Add(new AllClear()); }
+    public void clearEntry() { CharItems.Add(new ClearEntry()); }
+    public void randomNum() { CharItems.Add(new RandomNum()); }
+    public void answer() { CharItems.Add(new Answer()); }
+    public void equals() { CharItems.Add(new Equals()); }
+
+    // Binary Operators:
+    public void exponentiation() { CharItems.Add(new Exponentiation()); }
+    public void yRoot() { CharItems.Add(new YRoot()); }
+    public void division() { CharItems.Add(new Division()); }
+    public void multiply() { CharItems.Add(new Multiply()); }
+    public void subtraction() { CharItems.Add(new Subtraction()); }
+    public void addition() { CharItems.Add(new Addition()); }
+    public void ddecimal() { CharItems.Add(new Ddecimal()); }
 }

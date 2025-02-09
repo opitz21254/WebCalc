@@ -3,7 +3,8 @@ using CalcClasses;
 // The character left parenthesis button on the calculator
 public class LeftParenthesis : CharItem
 {
-    public LeftParenthesis() : base("(")
+    public LeftParenthesis()
+        : base("(")
     {
         IsSpecial = true;
     }
@@ -17,7 +18,8 @@ public class LeftParenthesis : CharItem
 // The character right parenthesis button on the calculator
 public class RightParenthesis : CharItem
 {
-    public RightParenthesis() : base(")")
+    public RightParenthesis()
+        : base(")")
     {
         IsSpecial = true;
     }
@@ -28,11 +30,11 @@ public class RightParenthesis : CharItem
     }
 }
 
-
 // The Radians Mode button on the calculator
 public class Rad : CharItem
 {
-    public Rad() : base("Rad") { }
+    public Rad()
+        : base("Rad") { }
 
     public override string GetDisplayString()
     {
@@ -43,7 +45,8 @@ public class Rad : CharItem
 // The Degrees Mode button on the calculator
 public class Deg : CharItem
 {
-    public Deg() : base("Deg") { }
+    public Deg()
+        : base("Deg") { }
 
     public override string GetDisplayString()
     {
@@ -54,7 +57,8 @@ public class Deg : CharItem
 // The All Clear button on the calculator
 public class AllClear : CharItem
 {
-    public AllClear() : base("AC") { }
+    public AllClear()
+        : base("AC") { }
 
     public override string GetDisplayString()
     {
@@ -65,10 +69,47 @@ public class AllClear : CharItem
 // The Clear Entry button on the calculator
 public class ClearEntry : CharItem
 {
-    public ClearEntry() : base("CE") { }
+    public ClearEntry()
+        : base("CE") { }
 
     public override string GetDisplayString()
     {
         return "";
+    }
+}
+
+// The Random button on the calculator
+public class RandomNum : CharItem
+{
+    public RandomNum()
+        : base("Rnd") { }
+
+    public override string GetDisplayString()
+    {
+        return "Random";
+    }
+}
+
+// The Answer button on the calculator
+public class Answer : CharItem
+{
+    public Answer()
+        : base("Ans") { }
+
+    public override string GetDisplayString()
+    {
+        return "";
+    }
+}
+
+// The Equals button on the calculator
+public class Equals : CharItem
+{
+    public Equals()
+        : base("Equals") { }
+
+    public override string GetDisplayString()
+    {
+        return "=";
     }
 }
