@@ -32,35 +32,35 @@
                     <td class="rfUaPd pno7A" colspan="2">
                         <div class="PaQdxb UpZIS">
                             <div class="XRsWPe MEdqYd bbBmvd">
-                                <div @onclick="setRad" class="Tqvz7b">Rad</div>
+                                <div @onclick="_calculator.setRad" class="Tqvz7b">Rad</div>
                                 <div class="Lm2Tt"></div>
-                                <div @onclick="setDeg" class="SwDSDf">Deg</div>
+                                <div @onclick="_calculator.setDeg" class="SwDSDf">Deg</div>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="factorial" class="XRsWPe feqqG knVDYb">x!</div>
+                            <div @onclick="_calculator.factorial" class="XRsWPe feqqG knVDYb">x!</div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="inverse" class="XRsWPe feqqG knVDYb">Inv</div>
+                            <div @onclick="_calculator.inverse" class="XRsWPe feqqG knVDYb">Inv</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="sine" class="XRsWPe MEdqYd Krlpq">sin</div>
-                            <div @onclick="arcSine" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="_calculator.sine" class="XRsWPe MEdqYd Krlpq">sin</div>
+                            <div @onclick="_calculator.arcSine" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 sin<sup>−1</sup></div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="logarithm" class="XRsWPe MEdqYd Krlpq">ln</div>
-                            <div @onclick="eToTheX" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="_calculator.logarithm" class="XRsWPe MEdqYd Krlpq">ln</div>
+                            <div @onclick="_calculator.eToTheX" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 e<sup>x</sup></div>
                         </div>
                     </td>
@@ -68,20 +68,20 @@
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="charPi" class="XRsWPe MEdqYd">π</div>
+                            <div @onclick="_calculator.charPi" class="XRsWPe MEdqYd">π</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="cosine" class="XRsWPe MEdqYd Krlpq">cos</div>
-                            <div @onclick="arcCosine" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="_calculator.cosine" class="XRsWPe MEdqYd Krlpq">cos</div>
+                            <div @onclick="_calculator.arcCosine" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 cos<sup>−1</sup></div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="logarithm" class="XRsWPe MEdqYd Krlpq">log</div>
-                            <div @onclick="tenToTheX" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="_calculator.logarithm" class="XRsWPe MEdqYd Krlpq">log</div>
+                            <div @onclick="_calculator.tenToTheX" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 10<sup>x</sup></div>
                         </div>
                     </td>
@@ -89,20 +89,20 @@
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="eulersNumber" class="XRsWPe MEdqYd">e</div>
+                            <div @onclick="_calculator.eulersNumber" class="XRsWPe MEdqYd">e</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="tangent" class="XRsWPe MEdqYd Krlpq">tan</div>
-                            <div @onclick="arcTangent" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="_calculator.tangent" class="XRsWPe MEdqYd Krlpq">tan</div>
+                            <div @onclick="_calculator.arcTangent" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 tan<sup>−1</sup></div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="squareRoot" class="XRsWPe MEdqYd Krlpq">√</div>
-                            <div @onclick="square" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="_calculator.squareRoot" class="XRsWPe MEdqYd Krlpq">√</div>
+                            <div @onclick="_calculator.square" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 x<sup>2</sup></div>
                         </div>
                     </td>
@@ -110,7 +110,7 @@
                 <tr>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="answer" class="XRsWPe MEdqYd Krlpq">Ans</div>
+                            <div @onclick="_calculator.answer" class="XRsWPe MEdqYd Krlpq">Ans</div>
                             <div @onclickd=" () => CalcRun.random" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 Rnd
                             </div>
@@ -118,13 +118,13 @@
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="exponentiation" class="XRsWPe MEdqYd">EXP</div>
+                            <div @onclick="_calculator.exponentiation" class="XRsWPe MEdqYd">EXP</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="xToTheY" class="XRsWPe MEdqYd Krlpq">x<sup>y</sup></div>
-                            <div @onclick="yRoot" class="XRsWPe MEdqYd rHLwad" style="display:none">
+                            <div @onclick="_calculator.xToTheY" class="XRsWPe MEdqYd Krlpq">x<sup>y</sup></div>
+                            <div @onclick="_calculator.yRoot" class="XRsWPe MEdqYd rHLwad" style="display:none">
                                 <sup>y</sup>√x
                             </div>
                         </div>
@@ -138,25 +138,25 @@
                 <tr>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="leftParenthesis" class="XRsWPe MEdqYd">(</div>
+                            <div @onclick="_calculator.leftParenthesis" class="XRsWPe MEdqYd">(</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="rightParenthesis" class="XRsWPe MEdqYd">)</div>
+                            <div @onclick="_calculator.rightParenthesis" class="XRsWPe MEdqYd">)</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="percentage" class="XRsWPe MEdqYd">%</div>
+                            <div @onclick="_calculator.percentage" class="XRsWPe MEdqYd">%</div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb UpZIS">
-                            <div @onclick="allClear" class="XRsWPe MEdqYd">
+                            <div @onclick="_calculator.allClear" class="XRsWPe MEdqYd">
                                 AC
                             </div>
-                            <div @onclick="clearEntry" class="XRsWPe MEdqYd" style="display:none">
+                            <div @onclick="_calculator.clearEntry" class="XRsWPe MEdqYd" style="display:none">
                                 CE
                             </div>
                         </div>
@@ -165,20 +165,20 @@
                 <tr>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="charSeven" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.charSeven" class="XRsWPe AOvabd">
                                 7
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="charEight" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.charEight" class="XRsWPe AOvabd">
                                 8
                             </div>
                         </div>
                     </td>
                     <td>
-                        <div @onclick="charNine" class="PaQdxb A2W7l">
+                        <div @onclick="_calculator.charNine" class="PaQdxb A2W7l">
                             <div class="XRsWPe AOvabd">
                                 9
                             </div>
@@ -186,7 +186,7 @@
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick="charZero" class="XRsWPe MEdqYd">
+                            <div @onclick="_calculator.charZero" class="XRsWPe MEdqYd">
                                 ÷
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <div @onclick="charFour" class="PaQdxb A2W7l">
+                        <div @onclick="_calculator.charFour" class="PaQdxb A2W7l">
                             <div class="XRsWPe AOvabd">
                                 4
                             </div>
@@ -202,21 +202,21 @@
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="charFive" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.charFive" class="XRsWPe AOvabd">
                                 5
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="charSix" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.charSix" class="XRsWPe AOvabd">
                                 6
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick="multiply" class="XRsWPe MEdqYd">
+                            <div @onclick="_calculator.multiply" class="XRsWPe MEdqYd">
                                 ×
                             </div>
                         </div>
@@ -225,28 +225,28 @@
                 <tr>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="charOne" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.charOne" class="XRsWPe AOvabd">
                                 1
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="charTwo" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.charTwo" class="XRsWPe AOvabd">
                                 2
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb A2W7l">
-                            <div @onclick="charThree" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.charThree" class="XRsWPe AOvabd">
                                 3
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick="subtraction" class="XRsWPe MEdqYd">
+                            <div @onclick="_calculator.subtraction" class="XRsWPe MEdqYd">
                                 −
                             </div>
                         </div>
@@ -262,21 +262,21 @@
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo G7BHUb">
-                            <div @onclick="ddecimal" class="XRsWPe AOvabd">
+                            <div @onclick="_calculator.ddecimal" class="XRsWPe AOvabd">
                                 .
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo G7BHUb">
-                            <div @onclick="equals" class="XRsWPe UUhRt">
+                            <div @onclick="_calculator.equals" class="XRsWPe UUhRt">
                                 =
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="PaQdxb mF5fo">
-                            <div @onclick="addition" class="XRsWPe MEdqYd">
+                            <div @onclick="_calculator.addition" class="XRsWPe MEdqYd">
                                 +
                             </div>
                         </div>
@@ -295,61 +295,18 @@
 
 @code {
     private string DisplayString { get; set; } = "";
-    private List<object> CharItems { get; set; } = new List<object>();
+    private Calculator _calculator;
 
-    // Special Buttons:
-    private void setRad() { CharItems.Add(new Rad()); }
-    private void setDeg() { CharItems.Add(new Deg()); }
+    public void SetUp()
+    {
+        _calculator = new Calculator();
+    }
 
-    // Single Operand Functions:
-    private void factorial() { CharItems.Add(new Factorial()); }
-    private void inverse() { CharItems.Add(new Inverse()); }
-    private void sine() { CharItems.Add(new Sine()); }
-    private void arcSine() { CharItems.Add(new ArcSine()); }
-    private void naturalLog() { CharItems.Add(new NaturalLog()); }
-    private void cosine() { CharItems.Add(new Cosine()); }
-    private void arcCosine() { CharItems.Add(new ArcCosine()); }
-    private void logarithm() { CharItems.Add(new Logarithm()); }
-    private void tenToTheX() { CharItems.Add(new TenToTheX()); }
-    private void eToTheX() { CharItems.Add(new EToTheX()); }
-    private void arcTangent() { CharItems.Add(new ArcTangent()); }
-    private void squareRoot() { CharItems.Add(new SquareRoot()); }
-    private void square() { CharItems.Add(new Square()); }
-    private void tangent() { CharItems.Add(new Tangent()); }
-    private void percentage() { CharItems.Add(new Percentage()); }
-    // Class but is it duplicate???
-    private void xToTheY() { CharItems.Add(new XToTheY()); }
-
-    // Constaints:
-    public void charZero() { CharItems.Add(new CharZero()); }
-    public void charOne() { CharItems.Add(new CharOne()); }
-    public void charTwo() { CharItems.Add(new CharTwo()); }
-    public void charThree() { CharItems.Add(new CharThree()); }
-    public void charFour() { CharItems.Add(new CharFour()); }
-    public void charFive() { CharItems.Add(new CharFive()); }
-    public void charSix() { CharItems.Add(new CharSix()); }
-    public void charSeven() { CharItems.Add(new CharSeven()); }
-    public void charEight() { CharItems.Add(new CharEight()); }
-    public void charNine() { CharItems.Add(new CharNine()); }
-    public void charPi() { CharItems.Add(new CharPi()); }
-    public void eulersNumber() { CharItems.Add(new EulersNumber()); }
-
-
-    // Special Buttons:
-    public void leftParenthesis() { CharItems.Add(new LeftParenthesis()); }
-    public void rightParenthesis() { CharItems.Add(new RightParenthesis()); }
-    public void allClear() { CharItems.Add(new AllClear()); }
-    public void clearEntry() { CharItems.Add(new ClearEntry()); }
-    public void randomNum() { CharItems.Add(new RandomNum()); }
-    public void answer() { CharItems.Add(new Answer()); }
-    public void equals() { CharItems.Add(new Equals()); }
-
-    // Binary Operators:
-    public void exponentiation() { CharItems.Add(new Exponentiation()); }
-    public void yRoot() { CharItems.Add(new YRoot()); }
-    public void division() { CharItems.Add(new Division()); }
-    public void multiply() { CharItems.Add(new Multiply()); }
-    public void subtraction() { CharItems.Add(new Subtraction()); }
-    public void addition() { CharItems.Add(new Addition()); }
-    public void ddecimal() { CharItems.Add(new Ddecimal()); }
+    public string MakeDisplayString()
+    {
+        foreach(CharItem item in _calculator)
+        {
+            DisplayStiring = DisplayString + Convert.ToString(item.GetDisplayString());
+        }
+    }
 }
