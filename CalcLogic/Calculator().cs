@@ -3,100 +3,112 @@ using CalcClasses;
 public class Calculator
 {
     public List<CharItem> CharItems { get; private set; }
+
     public Calculator()
     {
         CharItems = new List<CharItem>();
     }
-    //Below are calls for all the private methods for seamingly every function I know.
+
+    //Below are calls for all the public methods for seamingly every function I know.
     // Special Buttons:
-    private void setRad()
+    public void equals()
+    {
+        var valueOfExpression = 0m;
+        for(int i = 0; i < CharItems.Count; i++)
+        {
+            if(CharItems[i].IsFunction)
+            {
+                valueOfExpression = CharItems[i-1] + CharItems[i+1];
+                CharItems.RemoveRange(i-1, 3); //Starting index and count
+                int positionStart = i - 1;
+                CharItems.Insert(positionStart, new CharZero(valueOfExpression));
+            }
+        }
+    }
+
+    public void setRad()
     {
         CharItems.Add(new Rad());
     }
 
-    private void setDeg()
+    public void setDeg()
     {
         CharItems.Add(new Deg());
     }
 
     // Single Operand Functions:
-    private void factorial()
+    public void factorial()
     {
         CharItems.Add(new Factorial());
     }
 
-    private void inverse()
+    public void inverse()
     {
         CharItems.Add(new Inverse());
     }
 
-    private void sine()
+    public void sine()
     {
         CharItems.Add(new Sine());
     }
 
-    private void arcSine()
+    public void arcSine()
     {
         CharItems.Add(new ArcSine());
     }
 
-    private void naturalLog()
+    public void naturalLog()
     {
         CharItems.Add(new NaturalLog());
     }
 
-    private void cosine()
+    public void cosine()
     {
         CharItems.Add(new Cosine());
     }
 
-    private void arcCosine()
+    public void arcCosine()
     {
         CharItems.Add(new ArcCosine());
     }
 
-    private void logarithm()
+    public void logarithm()
     {
         CharItems.Add(new Logarithm());
     }
 
-    private void tenToTheX()
+    public void tenToTheX()
     {
         CharItems.Add(new TenToTheX());
     }
 
-    private void eToTheX()
+    public void eToTheX()
     {
         CharItems.Add(new EToTheX());
     }
 
-    private void arcTangent()
+    public void arcTangent()
     {
         CharItems.Add(new ArcTangent());
     }
 
-    private void squareRoot()
+    public void squareRoot()
     {
         CharItems.Add(new SquareRoot());
     }
 
-    private void square()
-    {
-        CharItems.Add(new Square());
-    }
-
-    private void tangent()
+    public void tangent()
     {
         CharItems.Add(new Tangent());
     }
 
-    private void percentage()
+    public void percentage()
     {
         CharItems.Add(new Percentage());
     }
 
     // Class but is it duplicate???
-    private void xToTheY()
+    public void xToTheY()
     {
         CharItems.Add(new XToTheY());
     }
@@ -191,11 +203,6 @@ public class Calculator
     public void answer()
     {
         CharItems.Add(new Answer());
-    }
-
-    public void equals()
-    {
-        CharItems.Add(new Equals());
     }
 
     // Binary Operators:

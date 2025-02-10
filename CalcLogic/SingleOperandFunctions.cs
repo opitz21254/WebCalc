@@ -3,10 +3,12 @@ using CalcClasses;
 // The factorial "!" button on the calculator
 public class Factorial : CharItem
 {
-    public Factorial() : base("!")
+    public Factorial()
+        : base("!")
     {
         IsFunction = true;
     }
+
     public override string GetDisplayString()
     {
         return "!";
@@ -16,10 +18,12 @@ public class Factorial : CharItem
 // The inverse "1/x" button on the calculator
 public class Inverse : CharItem
 {
-    public Inverse() : base("1/x")
+    public Inverse()
+        : base("1/x")
     {
         IsFunction = true;
     }
+
     public override string GetDisplayString()
     {
         return "1/x";
@@ -29,10 +33,12 @@ public class Inverse : CharItem
 // The sine "Sin" button on the calculator
 public class Sine : CharItem
 {
-    public Sine() : base("Sin")
+    public Sine()
+        : base("Sin")
     {
         IsFunction = true;
     }
+
     public override string GetDisplayString()
     {
         return "Sin";
@@ -42,7 +48,8 @@ public class Sine : CharItem
 // The arcsine "ArcSin" button on the calculator
 public class ArcSine : CharItem
 {
-    public ArcSine() : base("ArcSin")
+    public ArcSine()
+        : base("ArcSin")
     {
         IsFunction = true;
     }
@@ -56,10 +63,12 @@ public class ArcSine : CharItem
 // The natural logarithm "Ln" button on the calculator
 public class NaturalLog : CharItem
 {
-    public NaturalLog() : base("Ln")
+    public NaturalLog()
+        : base("Ln")
     {
         IsFunction = true;
     }
+
     public override string GetDisplayString()
     {
         return "Ln";
@@ -69,7 +78,8 @@ public class NaturalLog : CharItem
 // The cosine "Cos" button on the calculator
 public class Cosine : CharItem
 {
-    public Cosine() : base("Cos")
+    public Cosine()
+        : base("Cos")
     {
         IsFunction = true;
     }
@@ -83,7 +93,8 @@ public class Cosine : CharItem
 // The arccosine "ArcCos" button on the calculator
 public class ArcCosine : CharItem
 {
-    public ArcCosine() : base("ArcCos")
+    public ArcCosine()
+        : base("ArcCos")
     {
         IsFunction = true;
     }
@@ -97,7 +108,8 @@ public class ArcCosine : CharItem
 // The logarithm base 10 "Log" button on the calculator
 public class Logarithm : CharItem
 {
-    public Logarithm() : base("Log")
+    public Logarithm()
+        : base("Log")
     {
         IsFunction = true;
     }
@@ -111,7 +123,8 @@ public class Logarithm : CharItem
 // The "10^x" button on the calculator
 public class TenToTheX : CharItem
 {
-    public TenToTheX() : base("10^x")
+    public TenToTheX()
+        : base("10^x")
     {
         IsFunction = true;
     }
@@ -125,7 +138,8 @@ public class TenToTheX : CharItem
 // The "e^x" button on the calculator
 public class EToTheX : CharItem
 {
-    public EToTheX() : base("e^x")
+    public EToTheX()
+        : base("e^x")
     {
         IsFunction = true;
     }
@@ -139,7 +153,8 @@ public class EToTheX : CharItem
 // The arctangent "ArcTan" button on the calculator
 public class ArcTangent : CharItem
 {
-    public ArcTangent() : base("ArcTan")
+    public ArcTangent()
+        : base("ArcTan")
     {
         IsFunction = true;
     }
@@ -150,10 +165,11 @@ public class ArcTangent : CharItem
     }
 }
 
-// The square root "√" button on the calculator
+// The Suare root "√" button on the calculator
 public class SquareRoot : CharItem
 {
-    public SquareRoot() : base("√")
+    public SquareRoot()
+        : base("√")
     {
         IsFunction = true;
     }
@@ -164,10 +180,11 @@ public class SquareRoot : CharItem
     }
 }
 
-// The square "^2" button on the calculator
+// The Square "^2" button on the calculator
 public class Square : CharItem
 {
-    public Square() : base("^2")
+    public Square()
+        : base("^2")
     {
         IsFunction = true;
     }
@@ -181,7 +198,8 @@ public class Square : CharItem
 // The tangent "Tan" button on the calculator
 public class Tangent : CharItem
 {
-    public Tangent() : base("Tan")
+    public Tangent()
+        : base("Tan")
     {
         IsFunction = true;
     }
@@ -195,7 +213,8 @@ public class Tangent : CharItem
 // The percentage "%" button on the calculator
 public class Percentage : CharItem
 {
-    public Percentage() : base("%")
+    public Percentage()
+        : base("%")
     {
         IsFunction = true;
     }
@@ -206,10 +225,11 @@ public class Percentage : CharItem
     }
 }
 
-// xToTheY
+// XToTheY
 public class XToTheY : CharItem
 {
-    public XToTheY() : base("x^y")
+    public XToTheY()
+        : base("x^y")
     {
         IsFunction = true;
     }

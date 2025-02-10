@@ -5,10 +5,10 @@ public class CharZero : CharItem
 {
     public decimal Value { get; set; } = 0;
 
-    public CharZero()
+    public CharZero(decimal value = 0)
         : base("0")
     {
-        Value = 0;
+        Value = value;
     }
 
     public override string GetDisplayString()
