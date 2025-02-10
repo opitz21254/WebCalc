@@ -15,20 +15,17 @@ public class Calculator
     {
         for (int i = 0; i < CharItems.Count; i++)
         {
-            if (CharItems[i].IsBinaryOperator)
+            if (CharItems[i].IsBinaryOperator && CharItems[i].IsFunction)
             {
                 // Ensure valid indices for operands
                 if (i >= 1 && i < CharItems.Count - 1)
                 {
-                    if (CharItems[i].IsFunction)
-                    {
-                        var leftOperand = CharItems[i - 1].Value;
-                        var rightOperand = CharItems[i + 1].Value;
-                        var result = leftOperand + rightOperand;
-                        CharItems.RemoveRange(i - 1, 3); //Starting index and count
-                        // int positionStart = i - 1;
-                        CharItems.Insert(0, new CharZero(result));
-                    }
+                    var leftOperand = CharItems[i - 1].Value;
+                    var rightOperand = CharItems[i + 1].Value;
+                    var result = leftOperand + rightOperand;
+                    CharItems.RemoveRange(i - 1, 3); //Starting index and count
+                    // int positionStart = i - 1;
+                    CharItems.Insert(0, new CharZero(result));
                 }
             }
         }
