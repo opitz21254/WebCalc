@@ -26,8 +26,8 @@ public class Calculator
                         var rightOperand = CharItems[i + 1].Value;
                         var result = leftOperand + rightOperand;
                         CharItems.RemoveRange(i - 1, 3); //Starting index and count
-                        int positionStart = i - 1;
-                        CharItems.Insert(positionStart, new CharZero(result));
+                        // int positionStart = i - 1;
+                        CharItems.Insert(0, new CharZero(result));
                     }
                 }
             }

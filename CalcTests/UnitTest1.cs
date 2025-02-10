@@ -73,7 +73,7 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0];
+        var result = calculator.CharItems[0] as CharZero;
 
         // Assert
         Assert.Equal(8m, result?.Value); // 3 + 5 = 8
