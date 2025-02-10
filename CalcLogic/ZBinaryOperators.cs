@@ -1,11 +1,15 @@
 using CalcClasses;
 
-//Binary Item class which is intermediary. All binary functions inherit this
-public class BinaryItem : CharItem
+public abstract class BinaryItem : CharItem
 {
     public BinaryItem(string displayString)
-        : base(displayString) { }
+        : base(displayString)
+    {
+        IsFunction = true;
+        IsBinaryOperator = true;
+    }
 
+    // Abstract method to be implemented by specific binary operators
     public abstract decimal Operate(decimal leftOperand, decimal rightOperand);
 }
 
@@ -13,11 +17,7 @@ public class BinaryItem : CharItem
 public class Exponentiation : BinaryItem
 {
     public Exponentiation()
-        : base("^")
-    {
-        IsFunction = true;
-        IsBinaryOperator = true;
-    }
+        : base("^") { }
 
     public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
@@ -28,91 +28,78 @@ public class Exponentiation : BinaryItem
         }
         return value;
     }
+
+    public override string GetDisplayString()
+    {
+        return $"{leftOperand} ^ {rightOperand}";
+    }
 }
 
 // The character Y-th root of X button on the calculator
 public class YRoot : BinaryItem
 {
     public YRoot()
-        : base("y√x")
+        : base("y√x") { }
+
+    public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        IsFunction = true;
-        IsBinaryOperator = true;
+        return leftOperand + rightOperand;
     }
 
-    public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
+    public override string GetDisplayString()
     {
-        PrecidingTermValue = precidingTermValue;
-        ForegoingTermValue = foregoingTermValue;
+        return $"{leftOperand} / {rightOperand}";
     }
 }
 
 // The character division button on the calculator
 public class Division : BinaryItem
 {
-
     public Division()
-        : base("/")
-    {
-        IsFunction = true;
-        IsBinaryOperator = true;
-    }
+        : base("/") { }
 
-    public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
+    public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        PrecidingTermValue = precidingTermValue;
-        ForegoingTermValue = foregoingTermValue;
+        return leftOperand / rightOperand;
     }
 
     public override string GetDisplayString()
     {
-        return $"{PrecidingTermValue} / {ForegoingTermValue}";
+        return $"{leftOperand} / {rightOperand}";
     }
 }
 
 // The character multiply button on the calculator
 public class Multiply : BinaryItem
 {
-
     public Multiply()
-        : base("*")
-    {
-        IsFunction = true;
-        IsBinaryOperator = true;
-    }
+        : base("*") { }
 
-    public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
+    public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        PrecidingTermValue = precidingTermValue;
-        ForegoingTermValue = foregoingTermValue;
+        return leftOperand * rightOperand;
     }
 
     public override string GetDisplayString()
     {
-        return $"{PrecidingTermValue} * {ForegoingTermValue}";
+        return $"{leftOperand} * {rightOperand}";
     }
 }
 
 // The character subtraction button on the calculator
 public class Subtraction : BinaryItem
 {
-
     public Subtraction()
-        : base("-")
-    {
-        IsFunction = true;
-        IsBinaryOperator = true;
-    }
+        : base("-") { }
 
-    public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
+    public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        PrecidingTermValue = precidingTermValue;
-        ForegoingTermValue = foregoingTermValue;
+        return leftOperand - rightOperand;
     }
 
     public override string GetDisplayString()
     {
-        return $"{PrecidingTermValue} - {ForegoingTermValue}";
+        return $"{leftOperand} - {rightOperand}";
     }
 }
 
@@ -121,11 +108,7 @@ public class Subtraction : BinaryItem
 public class Addition : BinaryItem
 {
     public Addition()
-        : base("+")
-    {
-        IsFunction = true;
-        IsBinaryOperator = true;
-    }
+        : base("+") { }
 
     public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
@@ -142,20 +125,15 @@ public class Addition : BinaryItem
 public class Ddecimal : BinaryItem
 {
     public Ddecimal()
-        : base(".")
-    {
-        IsFunction = true;
-        IsBinaryOperator = true;
-    }
+        : base(".") { }
 
-    public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
+    public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        PrecidingTermValue = precidingTermValue;
-        ForegoingTermValue = foregoingTermValue;
+        return leftOperand / rightOperand;
     }
 
     public override string GetDisplayString()
     {
-        return $"{PrecidingTermValue} . {ForegoingTermValue}";
+        return Convert.ToDecimal(leftOperand.ToString() + rightOperand.ToString());
     }
 }
