@@ -13,15 +13,23 @@ public class Calculator
     // Special Buttons:
     public void equals()
     {
-        var valueOfExpression = 0m;
-        for(int i = 0; i < CharItems.Count; i++)
+        for (int i = 0; i < CharItems.Count; i++)
         {
-            if(CharItems[i].IsFunction)
+            if (CharItems[i].IsBinaryOperator)
             {
-                valueOfExpression = CharItems[i-1] + CharItems[i+1];
-                CharItems.RemoveRange(i-1, 3); //Starting index and count
-                int positionStart = i - 1;
-                CharItems.Insert(positionStart, new CharZero(valueOfExpression));
+                // Ensure valid indices for operands
+                if (i >= 1 && i < CharItems.Count - 1)
+                {
+                    if (CharItems[i].IsFunction)
+                    {
+                        var leftOperand = CharItems[i - 1].Value;
+                        var rightOperand = CharItems[i + 1].Value;
+                        var result = leftOperand + rightOperand;
+                        CharItems.RemoveRange(i - 1, 3); //Starting index and count
+                        int positionStart = i - 1;
+                        CharItems.Insert(positionStart, new CharZero(result));
+                    }
+                }
             }
         }
     }

@@ -3,13 +3,8 @@ using CalcClasses;
 // The character "0" on the calculator
 public class CharZero : CharItem
 {
-    public decimal Value { get; set; } = 0;
-
-    public CharZero(decimal value = 0)
-        : base("0")
-    {
-        Value = value;
-    }
+    public CharZero(decimal value = 0) //optional paramiter. Defaults to zero
+        : base("0", value) { }
 
     public override string GetDisplayString()
     {
