@@ -1,40 +1,43 @@
 using CalcClasses;
 
-// The character exponentiation button on the calculator
-public class Exponentiation : CharItem
+//Binary Item class which is intermediary. All binary functions inherit this
+public class BinaryItem : CharItem
 {
-    public decimal PrecidingTermValue { get; private set; }
-    public decimal ForegoingTermValue { get; private set; }
+    public BinaryItem(string displayString)
+        : base(displayString) { }
 
+    public abstract decimal Operate(decimal leftOperand, decimal rightOperand);
+}
+
+// The character exponentiation button on the calculator
+public class Exponentiation : BinaryItem
+{
     public Exponentiation()
         : base("^")
     {
         IsFunction = true;
         IsBinaryOperator = true;
-        PrecidingTermValue = 0;
-        ForegoingTermValue = 0;
     }
 
-    public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
+    public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        PrecidingTermValue = precidingTermValue;
-        ForegoingTermValue = foregoingTermValue;
+        decimal value = 1;
+        for (int i = 0; i = rightOperand; i++)
+        {
+            value *= leftOperand;
+        }
+        return value;
     }
 }
 
 // The character Y-th root of X button on the calculator
-public class YRoot : CharItem
+public class YRoot : BinaryItem
 {
-    public decimal PrecidingTermValue { get; private set; }
-    public decimal ForegoingTermValue { get; private set; }
-
     public YRoot()
         : base("y√x")
     {
         IsFunction = true;
         IsBinaryOperator = true;
-        PrecidingTermValue = 0;
-        ForegoingTermValue = 0;
     }
 
     public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
@@ -45,18 +48,14 @@ public class YRoot : CharItem
 }
 
 // The character division button on the calculator
-public class Division : CharItem
+public class Division : BinaryItem
 {
-    public decimal PrecidingTermValue { get; private set; }
-    public decimal ForegoingTermValue { get; private set; }
 
     public Division()
         : base("/")
     {
         IsFunction = true;
         IsBinaryOperator = true;
-        PrecidingTermValue = 0;
-        ForegoingTermValue = 0;
     }
 
     public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
@@ -72,18 +71,14 @@ public class Division : CharItem
 }
 
 // The character multiply button on the calculator
-public class Multiply : CharItem
+public class Multiply : BinaryItem
 {
-    public decimal PrecidingTermValue { get; private set; }
-    public decimal ForegoingTermValue { get; private set; }
 
     public Multiply()
         : base("*")
     {
         IsFunction = true;
         IsBinaryOperator = true;
-        PrecidingTermValue = 0;
-        ForegoingTermValue = 0;
     }
 
     public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
@@ -99,18 +94,14 @@ public class Multiply : CharItem
 }
 
 // The character subtraction button on the calculator
-public class Subtraction : CharItem
+public class Subtraction : BinaryItem
 {
-    public decimal PrecidingTermValue { get; private set; }
-    public decimal ForegoingTermValue { get; private set; }
 
     public Subtraction()
         : base("-")
     {
         IsFunction = true;
         IsBinaryOperator = true;
-        PrecidingTermValue = 0;
-        ForegoingTermValue = 0;
     }
 
     public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
@@ -125,46 +116,36 @@ public class Subtraction : CharItem
     }
 }
 
+//Addition goes here
 // The character addition button on the calculator
-public class Addition : CharItem
+public class Addition : BinaryItem
 {
-    public decimal PrecidingTermValue { get; private set; }
-    public decimal ForegoingTermValue { get; private set; }
-
     public Addition()
         : base("+")
     {
         IsFunction = true;
         IsBinaryOperator = true;
-        PrecidingTermValue = 0;
-        ForegoingTermValue = 0;
     }
 
-    public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)
+    public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        PrecidingTermValue = precidingTermValue;
-        ForegoingTermValue = foregoingTermValue;
+        return leftoperand + rightOperand;
     }
 
     public override string GetDisplayString()
     {
-        return $"{PrecidingTermValue} + {ForegoingTermValue}";
+        return $"{leftOperand} + {rightOperand}";
     }
 }
 
 // The character decimal button on the calculator
-public class Ddecimal : CharItem
+public class Ddecimal : BinaryItem
 {
-    public decimal PrecidingTermValue { get; private set; }
-    public decimal ForegoingTermValue { get; private set; }
-
     public Ddecimal()
         : base(".")
     {
         IsFunction = true;
         IsBinaryOperator = true;
-        PrecidingTermValue = 0;
-        ForegoingTermValue = 0;
     }
 
     public void SetUpBinaryOperator(decimal precidingTermValue, decimal foregoingTermValue)

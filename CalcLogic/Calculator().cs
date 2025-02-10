@@ -13,6 +13,7 @@ public class Calculator
     // Special Buttons:
     public void equals()
     {
+        //Loop for Binary Operators using polymorphism
         for (int i = 0; i < CharItems.Count; i++)
         {
             if (CharItems[i].IsBinaryOperator && CharItems[i].IsFunction)
@@ -22,10 +23,9 @@ public class Calculator
                 {
                     var leftOperand = CharItems[i - 1].Value;
                     var rightOperand = CharItems[i + 1].Value;
-                    var result = leftOperand + rightOperand;
+                    var result = CharItems[i].Operate(leftOperand, rightOperand); //The imaginary "plus" sign here is the only thing that will change for most methods
                     CharItems.RemoveRange(i - 1, 3); //Starting index and count
-                    // int positionStart = i - 1;
-                    CharItems.Insert(0, new CharZero(result));
+                    CharItems.Insert((i - 1), new CharZero(result));
                 }
             }
         }
