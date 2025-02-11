@@ -151,7 +151,7 @@ public class Logarithm : CharItem
     }
         public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
     {
-        decimal value = (decimal)Math.Log( (double)leftOperand, (double)10m);
+        decimal value = (decimal)Math.Log((double)leftOperand, 10d);
         return value;
     }
     public override string GetDisplayString()
