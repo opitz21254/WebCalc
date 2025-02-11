@@ -73,10 +73,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharZero;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(8m, result?.Value); // 3 + 5 = 8
+        Assert.Equal(8m, result); // 3 + 5 = 8
     }
 
     // Test for simple subtraction
@@ -91,10 +91,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharFive;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(5m, result?.Value); // 9 - 4 = 5
+        Assert.Equal(5m, result); // 9 - 4 = 5
     }
 
     // Test for simple multiplication
@@ -109,10 +109,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharOne;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(12m, result?.Value); // 2 * 6 = 12
+        Assert.Equal(12m, result); // 2 * 6 = 12
     }
 
     // Test for simple division
@@ -127,10 +127,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharFour;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(4m, result?.Value); // 8 / 2 = 4
+        Assert.Equal(4m, result); // 8 / 2 = 4
     }
 
     // Test for exponentiation
@@ -145,10 +145,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharEight;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(8m, result?.Value); // 2^3 = 8
+        Assert.Equal(8m, result); // 2^3 = 8
     }
 
     // Test for square root
@@ -162,10 +162,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharThree;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(3m, result?.Value); // sqrt(9) = 3
+        Assert.Equal(3m, result); // sqrt(9) = 3
     }
 
     // Test for percentage
@@ -179,13 +179,31 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharZero;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(0.5m, result?.Value); // 50% = 0.5
+        Assert.Equal(0.5m, result); // 50% = 0.5
     }
 
     // Test for factorial
+    [Fact]
+    public void Evaluate_Factorial_ShouldFunctionProperly()
+    {
+        // Arrange
+        var calculator = new Calculator();
+        calculator.charFour();
+        calculator.factorial();
+
+        // Act
+        var result = calculator.CharItems[0].Value;
+        bool result3 = calculator.CharItems[1].IsBinaryOperator;
+
+        // Assert
+        Assert.Equal(4m, result); // Check that the value is 4
+        Assert.Equal(false, result3);
+    }
+
+    // Test part two for factorial
     [Fact]
     public void Evaluate_Factorial_ShouldReturnCorrectResult()
     {
@@ -196,10 +214,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharTwo;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(24m, result?.Value); // 4! = 24
+        Assert.Equal(24m, result); // 4! = 24
     }
 
     // Test for sine function
@@ -213,10 +231,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharZero;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(0m, result?.Value); // sin(0) = 0
+        Assert.Equal(0m, result); // sin(0) = 0
     }
 
     // Test for cosine function
@@ -230,10 +248,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharOne;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(1m, result?.Value); // cos(0) = 1
+        Assert.Equal(1m, result); // cos(0) = 1
     }
 
     // Test for tangent function
@@ -247,10 +265,10 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharZero;
+        decimal result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(0m, result?.Value); // tan(0) = 0
+        Assert.Equal(0m, result); // tan(0) = 0
     }
 
     // Test for logarithm function
@@ -265,9 +283,9 @@ public class UnitTest1
         calculator.equals();
 
         // Act
-        var result = calculator.CharItems[0] as CharZero;
+        var result = calculator.CharItems[0].Value;
 
         // Assert
-        Assert.Equal(1m, result?.Value); // log10(10) = 1
+        Assert.Equal(1m, result); // log10(10) = 1
     }
 }

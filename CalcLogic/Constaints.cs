@@ -15,7 +15,7 @@ public class CharZero : CharItem
 // The character "1" on the calculator
 public class CharOne : CharItem
 {
-    public CharOne()
+    public CharOne(decimal value = 1)
         : base("1", 1m) { }
 
     public override string GetDisplayString()
@@ -27,7 +27,7 @@ public class CharOne : CharItem
 // The character "2" on the calculator
 public class CharTwo : CharItem
 {
-    public CharTwo()
+    public CharTwo(decimal value = 2)
         : base("2", 2m) { }
 
     public override string GetDisplayString()
@@ -39,7 +39,7 @@ public class CharTwo : CharItem
 // The character "3" on the calculator
 public class CharThree : CharItem
 {
-    public CharThree()
+    public CharThree(decimal value = 3)
         : base("3", 3m) { }
 
     public override string GetDisplayString()
@@ -51,7 +51,7 @@ public class CharThree : CharItem
 // The character "4" on the calculator
 public class CharFour : CharItem
 {
-    public CharFour()
+    public CharFour(decimal value = 4)
         : base("4", 4m) { }
 
     public override string GetDisplayString()
@@ -63,7 +63,7 @@ public class CharFour : CharItem
 // The character "5" on the calculator
 public class CharFive : CharItem
 {
-    public CharFive()
+    public CharFive(decimal value = 5)
         : base("5", 5m) { }
 
     public override string GetDisplayString()
@@ -75,7 +75,7 @@ public class CharFive : CharItem
 // The character "6" on the calculator
 public class CharSix : CharItem
 {
-    public CharSix()
+    public CharSix(decimal value = 6)
         : base("6", 6m) { }
 
     public override string GetDisplayString()
@@ -87,7 +87,7 @@ public class CharSix : CharItem
 // The character "7" on the calculator
 public class CharSeven : CharItem
 {
-    public CharSeven()
+    public CharSeven(decimal value = 7)
         : base("7", 7m) { }
 
     public override string GetDisplayString()
@@ -99,7 +99,7 @@ public class CharSeven : CharItem
 // The character "8" on the calculator
 public class CharEight : CharItem
 {
-    public CharEight()
+    public CharEight(decimal value = 8)
         : base("8", 8m) { }
 
     public override string GetDisplayString()
@@ -111,7 +111,7 @@ public class CharEight : CharItem
 // The character "9" on the calculator
 public class CharNine : CharItem
 {
-    public CharNine()
+    public CharNine(decimal value = 8)
         : base("9", 9m) { }
 
     public override string GetDisplayString()
@@ -122,7 +122,7 @@ public class CharNine : CharItem
 
 public class CharPi : CharItem
 {
-    public CharPi()
+    public CharPi(decimal value = 3.14m)
         : base("pi", 3.14m) { }
 
     public override string GetDisplayString()
@@ -133,7 +133,7 @@ public class CharPi : CharItem
 
 public class EulersNumber : CharItem
 {
-    public EulersNumber()
+    public EulersNumber(decimal value = 2.3m)
         : base("e", 2.3m) { }
 
     public override string GetDisplayString()

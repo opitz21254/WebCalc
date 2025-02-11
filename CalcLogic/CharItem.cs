@@ -8,17 +8,14 @@ public abstract class CharItem
     public bool IsBinaryOperator { get; protected set; }
     public bool IsSpecial { get; protected set; }
 
-    // public decimal Value { get; set; }
-
     //Constructor
     public CharItem(string displayString, decimal value = 0)
     {
         DisplayString = displayString;
+        Value = value;
         IsFunction = false;
         IsBinaryOperator = false;
         IsSpecial = false;
-        Value = value;
-        // Value = 0;
     }
 
     //Makes Item Display String
@@ -26,8 +23,9 @@ public abstract class CharItem
     {
         return $"{DisplayString}";
     }
-    public virtual decimal Operate(decimal leftOperand, decimal rightOperand)
+
+    public virtual decimal Operate(decimal leftOperand, decimal rightOperand = 0)
     {
-        return 0;
+        return 0m;
     }
 }

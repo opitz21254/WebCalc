@@ -9,8 +9,11 @@ public abstract class BinaryItem : CharItem
         IsBinaryOperator = true;
     }
 
-    // Abstract method to be implemented by specific binary operators
-    public abstract decimal Operate(decimal leftOperand, decimal rightOperand);
+    // // Abstract method to be implemented by specific binary operators
+    // public abstract decimal Operate(decimal leftOperand, decimal rightOperand)
+    // {
+    //     return 0m;
+    // }
 }
 
 // The character exponentiation button on the calculator
