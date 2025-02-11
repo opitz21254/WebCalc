@@ -26,4 +26,8 @@ public abstract class CharItem
     {
         return $"{DisplayString}";
     }
+    public virtual decimal Operate(decimal leftOperand, decimal rightOperand)
+    {
+        return 0;
+    }
 }

@@ -22,17 +22,17 @@ public class Exponentiation : BinaryItem
     public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
         decimal value = 1;
-        for (int i = 0; i = rightOperand; i++)
+        for (int i = 0; i < Convert.ToInt32(rightOperand); i++)
         {
             value *= leftOperand;
         }
         return value;
     }
 
-    public override string GetDisplayString()
-    {
-        return $"{leftOperand} ^ {rightOperand}";
-    }
+    // public override string GetDisplayString()
+    // {
+    //     return $"{leftOperand} ^ {rightOperand}";
+    // }
 }
 
 // The character Y-th root of X button on the calculator
@@ -46,10 +46,10 @@ public class YRoot : BinaryItem
         return leftOperand + rightOperand;
     }
 
-    public override string GetDisplayString()
-    {
-        return $"{leftOperand} / {rightOperand}";
-    }
+    // public override string GetDisplayString()
+    // {
+    //     return $"{leftOperand} / {rightOperand}";
+    // }
 }
 
 // The character division button on the calculator
@@ -63,10 +63,10 @@ public class Division : BinaryItem
         return leftOperand / rightOperand;
     }
 
-    public override string GetDisplayString()
-    {
-        return $"{leftOperand} / {rightOperand}";
-    }
+    // public override string GetDisplayString()
+    // {
+    //     return $"{leftOperand} / {rightOperand}";
+    // }
 }
 
 // The character multiply button on the calculator
@@ -80,10 +80,10 @@ public class Multiply : BinaryItem
         return leftOperand * rightOperand;
     }
 
-    public override string GetDisplayString()
-    {
-        return $"{leftOperand} * {rightOperand}";
-    }
+    // public override string GetDisplayString()
+    // {
+    //     return $"{leftOperand} * {rightOperand}";
+    // }
 }
 
 // The character subtraction button on the calculator
@@ -97,10 +97,10 @@ public class Subtraction : BinaryItem
         return leftOperand - rightOperand;
     }
 
-    public override string GetDisplayString()
-    {
-        return $"{leftOperand} - {rightOperand}";
-    }
+    // public override string GetDisplayString()
+    // {
+    //     return $"{leftOperand} - {rightOperand}";
+    // }
 }
 
 //Addition goes here
@@ -112,13 +112,13 @@ public class Addition : BinaryItem
 
     public override decimal Operate(decimal leftOperand, decimal rightOperand)
     {
-        return leftoperand + rightOperand;
+        return leftOperand + rightOperand;
     }
 
-    public override string GetDisplayString()
-    {
-        return $"{leftOperand} + {rightOperand}";
-    }
+    // public override string GetDisplayString()
+    // {
+    //     return $"{leftOperand} + {rightOperand}";
+    // }
 }
 
 // The character decimal button on the calculator
@@ -132,8 +132,8 @@ public class Ddecimal : BinaryItem
         return leftOperand / rightOperand;
     }
 
-    public override string GetDisplayString()
-    {
-        return Convert.ToDecimal(leftOperand.ToString() + rightOperand.ToString());
-    }
+    // public override string GetDisplayString()
+    // {
+    //     return Convert.ToDecimal(leftOperand.ToString() + rightOperand.ToString());
+    // }
 }
