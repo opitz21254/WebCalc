@@ -9,15 +9,15 @@ public class Factorial : CharItem
         IsFunction = true;
     }
 
-    // public override decimal Operate(decimal Operand)
-    // {
-    //     decimal value = 1;
-    //     for (int i = Convert.ToInt32(Operand); i > 0; i--)
-    //     {
-    //         value *= i;
-    //     }
-    //     return value;
-    // }
+    public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = 1;
+        for (int i = Convert.ToInt32(leftOperand); i > 0; i--)
+            {
+                value *= i;
+            }
+        return value;
+    }
 
     public override string GetDisplayString()
     {

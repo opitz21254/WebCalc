@@ -200,7 +200,7 @@ public class UnitTest1
 
         // Assert
         Assert.Equal(4m, result); // Check that the value is 4
-        Assert.Equal(false, result3);
+        Assert.False(result3);
     }
 
     // Test part two for factorial

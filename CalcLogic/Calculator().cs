@@ -33,25 +33,19 @@ public class Calculator
         }
 
         //Loop for Single Operand Functions using polymorphism
-        //Loop for Binary Operators using polymorphism
         for (int i = 0; i < CharItems.Count; i++)
         {
-            if (CharItems[i].IsFunction && !CharItems[i].IsBinaryOperator)
+            if (CharItems[i].IsFunction && !CharItems[i].IsBinaryOperator) //Very Importaint
             {
                 // Ensure valid indices for operands
-                if (i >= 1) //this was preventing my code from running
+                if (i >= 1) //this was preventing my code from running Importaint!!
                 {
                     var leftOperand = CharItems[i - 1].Value;
+                    var value = CharItems[i].Operate(leftOperand);
 
-                    decimal value = 1;
-                    for (int j = Convert.ToInt32(leftOperand); j > 0; j--)
-                    {
-                        value *= j;
-                    }
-
-                    //CharItems is defined in this file, CharItem is defined in CharItem.cs, this references BinaryItem which is deffined in ZBinaryOperators.
+                    //CharItems is defined in this file, CharItem is defined in CharItem.cs, is deffined in SingleOperandFunctions.
                     CharItems.RemoveRange(0, 1); //Starting index and count
-                    CharItems.Insert((1), new CharZero(value));
+                    CharItems.Insert((0), new CharZero(value));
                 }
             }
         }
