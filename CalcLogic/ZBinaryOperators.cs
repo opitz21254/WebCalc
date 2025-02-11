@@ -140,3 +140,22 @@ public class Ddecimal : BinaryItem
     //     return Convert.ToDecimal(leftOperand.ToString() + rightOperand.ToString());
     // }
 }
+
+// XToTheY
+public class XToTheY : CharItem
+{
+    public XToTheY()
+        : base("x^y")
+    {
+        IsFunction = true;
+    }
+        public override decimal Operate(decimal leftOperand, decimal rightOperand)
+    {
+        decimal value = (decimal)Math.Pow((double)leftOperand, (double)rightOperand);
+        return value;
+    }
+    public override string GetDisplayString()
+    {
+        return "x^y";
+    }
+}

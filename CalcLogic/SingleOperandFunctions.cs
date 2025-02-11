@@ -33,6 +33,11 @@ public class Inverse : CharItem
     {
         IsFunction = true;
     }
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = 1;
+        return value;
+    }
 
     public override string GetDisplayString()
     {
@@ -49,6 +54,11 @@ public class Sine : CharItem
         IsFunction = true;
     }
 
+    public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Sin((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "Sin";
@@ -63,7 +73,11 @@ public class ArcSine : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Asin((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "ArcSin";
@@ -78,7 +92,11 @@ public class NaturalLog : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Log((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "Ln";
@@ -93,7 +111,11 @@ public class Cosine : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Cos((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "Cos";
@@ -108,7 +130,11 @@ public class ArcCosine : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Acos((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "ArcCos";
@@ -123,7 +149,11 @@ public class Logarithm : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Log( (double)leftOperand, (double)10m);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "Log";
@@ -138,7 +168,11 @@ public class TenToTheX : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Pow((double)leftOperand, 10d);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "10^x";
@@ -146,14 +180,18 @@ public class TenToTheX : CharItem
 }
 
 // The "e^x" button on the calculator
-public class EToTheX : CharItem
+public class EToTheX : CharItem //right operand
 {
     public EToTheX()
         : base("e^x")
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Pow( Math.E, (double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "e^x";
@@ -168,7 +206,11 @@ public class ArcTangent : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Atan((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "ArcTan";
@@ -183,7 +225,11 @@ public class SquareRoot : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Sqrt((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "√";
@@ -198,7 +244,11 @@ public class Square : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Pow((double)leftOperand, 2d);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "^2";
@@ -213,7 +263,11 @@ public class Tangent : CharItem
     {
         IsFunction = true;
     }
-
+        public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        decimal value = (decimal)Math.Tan((double)leftOperand);
+        return value;
+    }
     public override string GetDisplayString()
     {
         return "Tan";
@@ -229,23 +283,13 @@ public class Percentage : CharItem
         IsFunction = true;
     }
 
+    public override decimal Operate(decimal leftOperand, decimal rightOperand = 0)
+    {
+        return leftOperand / 100m;
+    }
+
     public override string GetDisplayString()
     {
         return "%";
-    }
-}
-
-// XToTheY
-public class XToTheY : CharItem
-{
-    public XToTheY()
-        : base("x^y")
-    {
-        IsFunction = true;
-    }
-
-    public override string GetDisplayString()
-    {
-        return "x^y";
     }
 }
